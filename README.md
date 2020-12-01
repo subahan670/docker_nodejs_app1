@@ -1,5 +1,5 @@
-# nodejsapi-redis-example
-Simple Node.js and Redis
+# nodejsapi-docker-example
+Simple Node.js with docker
 To start project
 
 npm install
@@ -9,4 +9,4 @@ to run project
 
 nodemon server.js
 
-Hit api "http://localhost:3000/api/getUsersData"
+Hit api "http://localhost:3000
