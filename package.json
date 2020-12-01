@@ -1,0 +1,23 @@
+{
+  "name": "simple_node",
+  "version": "1.0.0",
+  "description": "simple nodejs api",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinodnextcoder/Nodejs_Api.git"
+  },
+  "keywords": [
+    "simple",
+    "nodejs",
+    "api"
+  ],
+  "author": "vinod",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
