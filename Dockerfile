@@ -1,20 +1,19 @@
-# Define the image we will use and version
-FROM node:8
+FROM node:16
 
-# Create an app directory to hold the application code
-WORKDIR /docker_nodejs_app
-
-# Duplicate the dependency file to the container's project root directory.
-COPY package*.json ./
+# Create app directory
+WORKDIR /usr/src/app
 
 # Install app dependencies
-RUN npm install
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
-# Bundle app source inside the docker image
+RUN npm install
+# If you are building your code for production
+# RUN npm ci --omit=dev
+
+# Bundle app source
 COPY . .
 
-# Expose our app port inside the app and 
-EXPOSE 3000:3000
-
-# Define commands that will run the app
-CMD ["npm", "start"]
+EXPOSE 3000
+CMD [ "node", "index.js" ]
