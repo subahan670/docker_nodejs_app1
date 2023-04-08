@@ -18,12 +18,15 @@ Go to the directory that has your Dockerfile and run the following command to bu
 ```bash
   docker build . -t node-web-app
 ```
+![Docker app run](./build.png)
 
 - Your image will now be listed by Docker:
 
 ```bash
   docker images
 ```
+
+![Docker app run](./dockerIm.png)
 
 - Run the image
 Running your image with -d runs the container in detached mode, leaving the container running in the background. The -p flag redirects a public port to a private port inside the container. Run the image you previously built:
@@ -41,6 +44,8 @@ Running your image with -d runs the container in detached mode, leaving the cont
 ```bash
   docker logs <container id>
 ```
+
+![Docker app run](./run.png)
 
 ## Tech Stack
 
